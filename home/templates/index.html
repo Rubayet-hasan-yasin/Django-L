@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block start %}
+
+    <h1>This is home page</h1>
+
+
+    <a href="contact">contact</a>
+    <a href="about">about</a>
+
+
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat deleniti molestiae animi sapiente at ipsa, quae
+        repellat reprehenderit maxime! Modi laborum possimus excepturi, temporibus alias perferendis repudiandae?
+        Aperiam, laboriosam doloremque.</h1>
+
+    
+
+    <table style="width:100%">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        {% for people in peoples %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{people.name}}</td>
+            <td>{{people.age}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+ 
+
+{% endblock %}
