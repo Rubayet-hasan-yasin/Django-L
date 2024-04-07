@@ -114,7 +114,7 @@ def Register_page(request):
         user.save()
 
         messages.info(request, "Register success")
-        return redirect("/register")
+        return redirect("/login")
 
 
     return render(request, "register.html")
